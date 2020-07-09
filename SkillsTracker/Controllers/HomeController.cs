@@ -16,13 +16,13 @@ namespace SkillsTracker.Controllers
         [Route("/skills")]
         public IActionResult SkillsIndex()
         {
-            string html = "<h1 style='background-color: purple; color: white; padding: 10px; text-align: center'>Skills Tracker</h1>" +
-                             "<h2 style='background-color: rgb(169, 169, 169); color: white; padding: 5px; text-align: center'>Coding skills to learn</h2>" +
-                             "<ul style='background-color: rgb(127, 255, 212); list-style-type:none;'>" +
-                                 "<li style='padding: 5px; text-align: center'><b>C#</b></li>" +
-                                 "<li style='padding: 5px; text-align: center'><b>JavaScript</b></li>" +
-                                 "<li style='padding: 5px; text-align: center'><b>Python</b></li>" +
-                             "</ul>";
+            string html = "<h1 style='background-color: purple; color: white; padding: 10px; text-align: center; margin-left: 20%; margin-right: 20%'>Skills Tracker</h1>" +
+                             "<h2 style='background-color: rgb(169, 169, 169); color: white; padding: 5px; text-align: center; margin-left: 20%; margin-right: 20%'>Coding skills to learn</h2>" +
+                             "<ol style='background-color: rgb(127, 255, 212);margin-left: 20%; margin-right: 20%'>" +
+                                 "<li style='padding: 5px; display: inline-block; width: 43%;'><b>C#</b></li>" +
+                                 "<li style='padding: 5px; display: inline-block; width: 43%;'><b>JavaScript</b></li>" +
+                                 "<li style='padding: 5px; display: inline-block;'><b>Python</b></li>" +
+                             "</ol>";
             return Content(html, "text/html");
         }
         
@@ -69,10 +69,10 @@ namespace SkillsTracker.Controllers
         public IActionResult Completed(string csharp, string javascript, string python, string date = "2020-07-17")
         {
             string html = "<h1 style='background-color: purple; color: white; padding: 10px; text-align: center'> " + date + "</h1>" +
-                          "<ol style='background-color: rgb(127, 255, 212);'>" +
-                              "<li style='padding: 5px;'><b>C#</b>: " + csharp + "</li>" +
-                              "<li style='padding: 5px;'><b>JavaScript</b>: " + javascript + "</li>" +
-                              "<li style='padding: 5px;'><b>Python</b>: " + python + "</li>" +
+                          "<ol style='background-color: rgb(127, 255, 212); margin-top: 10px; margin-bottom: 10px'>" +
+                              "<li style='padding: 5px; display: inline-block; width: 43%;'><b>C#</b>: " + csharp + "</li>" +
+                              "<li style='padding: 5px; display: inline-block; width: 43%;'><b>JavaScript</b>: " + javascript + "</li>" +
+                              "<li style='padding: 5px; display: inline-block;'><b>Python</b>: " + python + "</li>" +
                           "</ol>";
             return Content(html, "text/html");
         }
